@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
@@ -11,18 +10,164 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <!-- <Header /> -->
-    <main>
-      <section>
-        <div class="bg-[#FAFAFA] py-4 pt- flex flex-col">
-          <h1 class="text-7xl flex flex-col">
-            <span>Designing a world where</span>
-            <span>digital technologies are</span>
-            <span>enablers of experiences</span>
-          </h1>
+    <!-- HERO -->
+    <section
+      class="py-24 px-4 md:px-48 bg-[#FAFAFA] flex flex-col gap-24 md:gap-48"
+    >
+      <h3
+        class="text-black text-3xl font-normal tracking-wide text-center md:text-left"
+      >
+        Petros Chantzopoulos
+      </h3>
+
+      <div class="flex flex-col gap-24">
+        <h1
+          class="text-black text-5xl md:text-7xl font-semibold tracking-wide text-center md:text-left leading-normal"
+        >
+          Designing a world where digital technologies are <span
+            class="text-[#EB6124]">enablers</span
+          >
+          of experiences.
+        </h1>
+        <h1
+          class="text-black text-5xl md:text-7xl font-semibold tracking-wide text-center md:text-left leading-normal"
+        >
+          Offering <span class="text-[#EB6124]">people</span> meaningful & expressive
+          interactions.
+        </h1>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="bg-black py-24 px-4 md:py-48 md:px-48 flex flex-col gap-48">
+      <div class="flex flex-col gap-6 md:w-2/4">
+        <h4 class="text-white text-3xl font-normal leading-normal">
+          Hey I'm Petros!
+        </h4>
+        <h4 class="text-white text-3xl font-normal leading-normal">
+          I'm an Interaction & UX/UI designer. I design rich, meaningful and
+          expressive digital experiences by connecting design, technology and
+          data. With my background in product design, engineering and
+          human-computer interaction I craft experiences leveraging data as a
+          design material.
+        </h4>
+
+        <h4 class="text-white text-3xl font-normal leading-normal">
+          In a world so saturated by flashy and tacky digital experiences I aim
+          to design for clarity, simplicity, accessibility and inclusivity.
+        </h4>
+      </div>
+
+      <!-- DOUBLE TEXT SECTION -->
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col gap-3 w-2/4">
+          <h4 class="text-white text-3xl font-normal leading-normal">
+            "Show me, don't tell me."
+          </h4>
+          <p class="text-[#A8AFB9] text-2xl font-normal leading-normal">
+            Experiences are always felt, never described. Designing meaningful
+            interactions is an act of doing, not an act of “gut feelings” and
+            guess work. As a designer my role is to embrace and welcome the
+            inherently uncertain nature of the design process and work
+            holistically unraveling assumptions.
+          </p>
         </div>
-      </section>
-    </main>
+        <div class="flex flex-col gap-3 w-2/4">
+          <h4 class="text-white text-3xl font-normal leading-normal">
+            Designing is not a solo project
+          </h4>
+          <p class="text-[#A8AFB9] text-2xl font-normal leading-normal">
+            I’m a firm believer that great products are a result of even greater
+            multidimensional and multidisciplinary teams. As a designer having
+            feedback, discussions and critique sessions with my teams is another
+            way to be engaged in a deeper level with our desired end
+            experiences. In the end of the day, I don’t design things for myself
+            by myself. so testing soon and often even within the teams is my
+            modus operandi.
+          </p>
+        </div>
+      </div>
+
+      <!-- EXPERTISES & SERVICES & INDUSTRY KNOWLEDGE -->
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col gap-3 w-2/4">
+          <h4 class="text-white text-3xl font-normal leading-normal">
+            Expertises & Services
+          </h4>
+          <ul class="list-disc list-inside">
+            <li class="text-white text-2xl font-normal leading-normal">
+              Product Design
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Product Design
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Product Design
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Product Design
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Product Design
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-3 w-2/4">
+          <h4 class="text-white text-3xl font-normal leading-normal">
+            Industry Knowledge Areas
+          </h4>
+          <ul class="list-disc list-inside">
+            <li class="text-white text-2xl font-normal leading-normal">
+              Healthcare
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Supply Management Processes
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Marketing Technology (MarTech)
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Digital & Organisational Transformation
+            </li>
+            <li class="text-white text-2xl font-normal leading-normal">
+              Product Design
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL WORK -->
+    <section
+      class="py-24 px-4 md:px-48 md:py-48 bg-[#FAFAFA] flex flex-col gap-24"
+    >
+      <h3
+        class="text-black text-4xl md:text-6xl font-semibold text-center tracking-wider"
+      >
+        Professional Work
+      </h3>
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-12 gap-y-12">
+        <div class="bg-[#A8AFB9] w-[400px] h-[400px] items-center"></div>
+        <div class="bg-[#A8AFB9] w-[400px] h-[400px] items-center"></div>
+        <div class="bg-[#A8AFB9] w-[400px] h-[400px] items-center"></div>
+        <div class="bg-[#A8AFB9] w-[400px] h-[400px] items-center"></div>
+        <div class="bg-[#A8AFB9] w-[400px] h-[400px] items-center"></div>
+        <div class="bg-[#A8AFB9] w-[400px] h-[400px] items-center"></div>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h4 class="text-black text-3xl font-normal text-center leading-normal">
+          For NDA reasons, I can’t show my work in the public domain.
+        </h4>
+        <h4 class="text-black text-3xl font-normal text-center leading-normal">
+          However, I can show you some non-NDA work in a private portfolio.
+        </h4>
+        <a
+          href="mailto:petros.chantz@gmail.com"
+          class="bg-black hover:bg-[#EB6124] shadow-lg ease-in-out text-white text-xl self-center px-4 py-2 rounded-lg mt-6"
+          >Request Petros' secret portfolio</a
+        >
+      </div>
+    </section>
     <Footer />
   </body>
 </html>
