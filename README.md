@@ -1,4 +1,4 @@
-# Astro Starter Kit: Blog
+# TEST TEST Astro Starter Kit: Blog
 
 ```sh
 npm create astro@latest -- --template blog
@@ -66,4 +66,5 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 ## Credit
 
 This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+
 # portfolio_2024
