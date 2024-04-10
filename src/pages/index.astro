@@ -10,270 +10,245 @@ import { Image } from "astro:assets";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
-    <!-- HERO -->
-    <section
-      class="py-20 px-4 md:px-16 md:py-16 bg-[#FAFAFA] h-screen flex flex-col gap-28 md:gap-48"
-    >
-      <h3
-        class="text-black text-2xl font-normal tracking-wide text-center md:text-left"
+  <body class="flex flex-row">
+    <!-- LEFT SIDE -->
+    <section class="flex flex-col w-1/2 bg-white pt-12 pb-6 px-12">
+      <a
+        href="http://petros-chantz.com"
+        class="text-xl tracking-wide font-medium text-[#202831]"
+        >Petros Chantzopoulos</a
       >
-        Petros Chantzopoulos
-      </h3>
-
-      <div
-        class="flex flex-col w-full self-center items-center md:hidden justify-center"
-      >
-        <h1
-          class="flex flex-col text-4xl self-center font-semibold tracking-wide text-center leading-snug"
-        >
-          <span>Designing a world</span>
-          <span>where digital</span>
-          <span>technologies are</span>
-          <span class="text-[#EB6124]">enablers</span>
-          <span> of experiences.</span>
-        </h1>
-      </div>
-
-      <div
-        class="hidden md:flex flex-col self-center items-center justify-center"
-      >
-        <h1
-          class="flex flex-col text-8xl 4k:leading-normal self-center font-semibold tracking-wide text-center leading-snug"
-        >
-          <span>Designing a world where</span>
-          <span>digital technologies are</span>
-          <span>
-            <span class="text-[#EB6124]">enablers</span> of experiences.
-          </span>
-        </h1>
-      </div>
-    </section>
-
-    <!-- INFO -->
-    <section class="bg-black py-48 px-4 md:py-48 md:px-48 flex flex-col gap-48">
-      <div class="flex flex-col gap-6 md:w-2/4">
-        <h4 class="text-white text-3xl font-normal leading-normal">
-          Hey, I'm Petros!
-        </h4>
-        <h4 class="text-white text-3xl font-normal leading-normal">
-          I'm an Interaction & UX/UI designer. I design rich, meaningful and
-          expressive digital experiences by connecting design, technology and
-          data. With my background in product design, engineering and
-          human-computer interaction, I craft product experiences for
-          organisations leveraging data as a design material.
-        </h4>
-      </div>
-
-      <!-- DOUBLE TEXT SECTION -->
-      <div class="flex flex-col md:flex-row gap-24 md:gap-12">
-        <div class="flex flex-col gap-6 md:w-2/4">
-          <h4 class="text-white text-3xl font-normal leading-normal">
-            "Show me, don't tell me."
-          </h4>
-          <p class="text-[#A8AFB9] text-xl font-normal leading-loose">
-            Experiences are always felt, never described. Designing meaningful
-            digital interactions is an act of doing, not an act of “gut
-            feelings” and guesswork. As a designer, I embrace and welcome the
-            inherently uncertain nature of the design process. I work
-            holistically, unravelling assumptions and ambiguities that sit on
-            the surface.
-          </p>
-        </div>
-        <div class="flex flex-col gap-6 md:w-2/4">
-          <h4 class="text-white text-3xl font-normal leading-normal">
-            Designing is not a solo project
-          </h4>
-          <p class="text-[#A8AFB9] text-xl font-normal leading-loose">
-            I don’t design alone in my ivory tower, thinking about an ideal
-            world. The mindset of a design practice that is cut off from any
-            other discipline is dangerous and narrow-minded and should come to
-            an end. I believe great products are a result of even greater teams.
-            Including my team members in the design process is essential for
-            success.
-          </p>
-        </div>
-      </div>
-
-      <!-- EXPERTISES & SERVICES & INDUSTRY KNOWLEDGE -->
-      <div class="flex flex-col md:flex-row gap-24 md:gap-12">
-        <div class="flex flex-col gap-6 md:w-1/3">
-          <h4 class="text-white text-3xl font-normal leading-normal">
-            Expertises & Services
-          </h4>
-          <ul class="list-disc list-inside flex flex-col gap-3">
-            <li class="text-white text-xl font-normal leading-normal">
-              UX/UI Design
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Product & Strategy Design
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              User Research & Usability Methods
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Lofi & Hifi Prototyping
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Data Design Thinking
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Customer Journey Mapping
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-6 md:w-1/3">
-          <h4 class="text-white text-3xl font-normal leading-normal">
-            Knowledge Areas
-          </h4>
-          <ul class="list-disc list-inside flex flex-col gap-3">
-            <li class="text-white text-xl font-normal leading-normal">
-              Artificial Intelligence (AI) Workflows
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Information Technology
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Management Dashboards
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Technology Ecosystems
-            </li>
-            <li class="text-white text-xl font-normal leading-normal">
-              Digital & Organisational Transformation
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL WORK -->
-    <section class="py-24 px-4 md:py-48 bg-white flex flex-col gap-24">
-      <h3
-        class="text-black text-4xl md:text-6xl font-semibold text-center tracking-wider"
-      >
-        Professional Work
-      </h3>
-      <div class="flex flex-col md:px-20 gap-12">
-        <div class="flex flex-col md:flex-row gap-12">
-          <div
-            class="bg-[#F5F7F9] rounded md:w-1/3 h-96 relative flex flex-col justify-center group hover:bg-[#D7DCE0]"
-          >
-            <p
-              class="px-5 py-[5px] bg-[#D7DCE0] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 bottom-7 self-center text-base border-2 border-[#566673]"
-            >
-              Supply Chain Dashboard
-            </p>
-            <Image
-              src="/project-thumbnail.png"
-              alt="descriptive text"
-              width="300"
-              height="150"
-              class="drop-shadow-xl self-center z-0"
-            />
-          </div>
-          <div
-            class="bg-[#F5F7F9] rounded md:w-1/3 h-96 relative flex flex-col justify-center group hover:bg-[#D7DCE0]"
-          >
-            <p
-              class="px-5 py-[5px] bg-[#D7DCE0] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 bottom-7 self-center text-base border-2 border-[#566673]"
-            >
-              Supply Chain Dashboard
-            </p>
-            <Image
-              src="/test-pic.png"
-              alt="descriptive text"
-              width="300"
-              height="150"
-              class="drop-shadow-xl self-center z-0"
-            />
-          </div>
-          <div
-            class="bg-[#F5F7F9] rounded md:w-1/3 h-96 relative flex flex-col justify-center group hover:bg-[#D7DCE0]"
-          >
-            <p
-              class="px-5 py-[5px] bg-[#D7DCE0] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 bottom-7 self-center text-base border-2 border-[#566673]"
-            >
-              Supply Chain Dashboard
-            </p>
-            <Image
-              src="/project-thumbnail.png"
-              alt="descriptive text"
-              width="300"
-              height="150"
-              class="drop-shadow-xl self-center z-0"
-            />
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row gap-12">
-          <div
-            class="bg-[#F5F7F9] rounded md:w-1/3 h-96 relative flex flex-col justify-center group hover:bg-[#D7DCE0]"
-          >
-            <p
-              class="px-5 py-[5px] bg-[#D7DCE0] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 bottom-7 self-center text-base border-2 border-[#566673]"
-            >
-              Supply Chain Dashboard
-            </p>
-            <Image
-              src="/project-thumbnail.png"
-              alt="descriptive text"
-              width="300"
-              height="150"
-              class="drop-shadow-xl self-center z-0"
-            />
-          </div>
-          <div
-            class="bg-[#F5F7F9] rounded md:w-1/3 h-96 relative flex flex-col justify-center group hover:bg-[#D7DCE0]"
-          >
-            <p
-              class="px-5 py-[5px] bg-[#D7DCE0] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 bottom-7 self-center text-base border-2 border-[#566673]"
-            >
-              Supply Chain Dashboard
-            </p>
-            <Image
-              src="/project-thumbnail.png"
-              alt="descriptive text"
-              width="300"
-              height="150"
-              class="drop-shadow-xl self-center z-0"
-            />
-          </div>
-          <div
-            class="bg-[#F5F7F9] rounded md:w-1/3 h-96 relative flex flex-col justify-center group hover:bg-[#D7DCE0]"
-          >
-            <p
-              class="px-5 py-[5px] bg-[#D7DCE0] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 bottom-7 self-center text-base border-2 border-[#566673]"
-            >
-              Supply Chain Dashboard
-            </p>
-            <Image
-              src="/project-thumbnail.png"
-              alt="descriptive text"
-              width="300"
-              height="150"
-              class="drop-shadow-xl self-center z-0"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-6 md:gap-3">
-        <h4
-          class="text-black text-xl md:text-3xl font-normal text-center leading-normal"
-        >
-          For NDA reasons, I can’t show the above work in the public domain.
-        </h4>
-        <h4
-          class="text-black text-xl md:text-3xl font-normal text-center leading-normal"
-        >
-          However, I can show you some non-NDA work in a private portfolio.
-        </h4>
+      <div class="flex flex-row gap-6 self-end fixed bottom-6">
         <a
           href="mailto:petros.chantz@gmail.com"
-          class="bg-black hover:bg-[#EB6124] shadow-lg ease-in-out text-white text-xl self-center px-4 py-2 rounded-lg mt-12 md:mt-6"
-          >Request Petros' private portfolio</a
+          class="hover:text-[#0ea2e9] text-[#202831] text-lg border-b-2 hover:border-b-[#0ea2e9] border-b-[#202831] self-center py-[2px]"
+          >email</a
+        >
+        <a
+          href="http://"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-[#0ea2e9] text-[#202831] text-lg border-b-2 hover:border-b-[#0ea2e9] border-b-[#202831] self-center py-[2px]"
+          >linkedIn</a
         >
       </div>
+      <div class="flex flex-col gap-3 fixed right-1/2 top-1/2 mr-12">
+        <a
+          href="#hero"
+          class="w-2 h-2 bg-[#D7DCE0] rounded-full hover:bg-[#0ea2e9]"></a>
+        <a
+          href="#about"
+          class="w-2 h-2 bg-[#D7DCE0] rounded-full hover:bg-[#0ea2e9]"></a>
+        <a
+          href="#writing"
+          class="w-2 h-2 bg-[#D7DCE0] rounded-full hover:bg-[#0ea2e9]"></a>
+      </div>
+
+      <div class="h-full mb-24">
+        <div class="h-[90dvh] flex items-center" id="hero">
+          <h1
+            class="flex flex-col font-medium text-5xl leading-snug text-[#202831]"
+          >
+            <span>Designing a world where</span>
+            <span>digital technologies are</span>
+            <span
+              ><span class="text-[#0ea2e9]">enablers</span> of experiences.</span
+            >
+          </h1>
+        </div>
+        <div class="mt-24 mr-24 flex flex-col gap-48">
+          <div class="gap-6 flex flex-col" id="about">
+            <h1 class="font-medium text-5xl leading-snug text-[#202831]">
+              Hey, I'm Petros!
+            </h1>
+            <h3
+              class="text-[#202831] text-3xl flex flex-col gap-6 leading-snug font-medium"
+            >
+              I'm an Interaction & UX/UI designer.
+              <span
+                >I design rich, meaningful and expressive digital experiences by
+                connecting design, technology and data.</span
+              > With my background in product design, engineering and human-computer
+              interaction, I craft product experiences for organisations leveraging
+              data as a design material.
+            </h3>
+          </div>
+
+          <div class="flex flex-col gap-24" id="writing">
+            <div class="flex flex-col gap-6">
+              <h3 class="text-3xl leading-snug font-semibold">
+                "Show me, don't tell me."
+              </h3>
+              <p class="text-3xl leading-snug font-normal">
+                Experiences are always felt, never described. Designing
+                meaningful digital interactions is an act of doing, not an act
+                of “gut feelings” and guesswork. As a designer, I embrace and
+                welcome the inherently uncertain nature of the design process. I
+                work holistically, unravelling assumptions and ambiguities that
+                sit on the surface.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-6">
+              <h3 class="text-3xl leading-snug font-semibold">
+                Designing is not a solo project
+              </h3>
+              <p class="text-3xl leading-snug font-normal">
+                I don’t design alone in my ivory tower, thinking about an ideal
+                world. The mindset of a design practice that is cut off from any
+                other discipline is dangerous and narrow-minded. I believe
+                design is crossroad of multiple disciplines and great products
+                are a result of even greater teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <Footer />
+    <!-- RIGHT SIDE -->
+
+    <div
+      class="fixed h-1/5 m-6 p-6 bottom-6 flex flex-col justify-between left-1/2 w-[650px] rounded drop-shadow-lg bg-white z-10"
+    >
+      <div class="flex flex-row items-start gap-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-14 h-14"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+          ></path>
+        </svg>
+
+        <p class="text-lg">
+          For NDA reasons, I can’t show my work in the public domain. However, I
+          can show you some non-NDA work in a private portfolio.
+        </p>
+      </div>
+
+      <div class="flex flex-row gap-3 justify-end">
+        <button
+          type="button"
+          class="bg-[#0ea2e9] hover:bg-[#0287c7] shadow-lg ease-in-out text-white text-base self-center px-4 py-2 rounded mt-12 md:mt-6"
+          >Request portfolio</button
+        >
+        <button
+          type="button"
+          class="hover:bg-[#f0faff] ease-in-out text-[#0ea2e9] text-base self-center px-4 py-2 rounded mt-12 md:mt-6"
+          >No, maybe later</button
+        >
+      </div>
+    </div>
+
+    <section class="h-lvh fixed left-1/2 w-1/2 pr-6 py-6">
+      <div class="flex flex-row w-full h-full gap-6 z-0">
+        <ul class="flex flex-col h-full gap-6 w-1/2">
+          <button
+            class="w-full h-full flex flex-col justify-center relative group bg-[#fafafa] hover:bg-[#F5F7F9] rounded"
+          >
+            <p
+              class="px-5 py-[5px] bg-[#f0faff] text-[#202831] absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-[#202831]"
+            >
+              Supply Chain Dashboard
+            </p>
+            <Image
+              src="/project-thumbnail.png"
+              alt="descriptive text"
+              width="300"
+              height="150"
+              class="drop-shadow-xl self-center z-0"
+            />
+          </button>
+          <button
+            class="w-full h-full flex flex-col justify-center relative group bg-[#fafafa] hover:bg-[#F5F7F9] rounded"
+          >
+            <p
+              class="px-5 py-[5px] bg-[#F5F7F9] text-[#202831] absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-[#202831]"
+            >
+              Supply Chain Dashboard
+            </p>
+            <Image
+              src="/project-thumbnail.png"
+              alt="descriptive text"
+              width="300"
+              height="150"
+              class="drop-shadow-xl self-center z-0"
+            />
+          </button>
+          <button
+            class="w-full h-full flex flex-col justify-center relative group bg-[#fafafa] hover:bg-[#F5F7F9] rounded"
+          >
+            <p
+              class="px-5 py-[5px] bg-[#F5F7F9] text-[#202831] absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-[#202831]"
+            >
+              Supply Chain Dashboard
+            </p>
+            <Image
+              src="/project-thumbnail.png"
+              alt="descriptive text"
+              width="300"
+              height="150"
+              class="drop-shadow-xl self-center z-0"
+            />
+          </button>
+        </ul>
+        <ul class="flex flex-col h-full gap-6 w-1/2">
+          <button
+            class="w-full h-full flex flex-col justify-center relative group bg-[#fafafa] hover:bg-[#f0faff] rounded"
+          >
+            <p
+              class="px-5 py-[5px] bg-[#f0faff] text-[#e0f4fe] absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-[#e0f4fe]"
+            >
+              Supply Chain Dashboard
+            </p>
+            <Image
+              src="/project-thumbnail.png"
+              alt="descriptive text"
+              width="300"
+              height="150"
+              class="drop-shadow-xl self-center z-0"
+            />
+          </button>
+          <button
+            class="w-full h-full flex flex-col justify-center relative group bg-[#fafafa] hover:bg-[#f0faff] rounded"
+          >
+            <p
+              class="px-5 py-[5px] bg-[#f0faff] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-[#566673]"
+            >
+              Supply Chain Dashboard
+            </p>
+            <Image
+              src="/project-thumbnail.png"
+              alt="descriptive text"
+              width="300"
+              height="150"
+              class="drop-shadow-xl self-center z-0"
+            />
+          </button>
+          <button
+            class="w-full h-full flex flex-col justify-center relative group bg-[#fafafa] hover:bg-[#f0faff] rounded"
+          >
+            <p
+              class="px-5 py-[5px] bg-[#f0faff] text-[#566673] absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-[#566673]"
+            >
+              Supply Chain Dashboard
+            </p>
+            <Image
+              src="/project-thumbnail.png"
+              alt="descriptive text"
+              width="300"
+              height="150"
+              class="drop-shadow-xl self-center z-0"
+            />
+          </button>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
