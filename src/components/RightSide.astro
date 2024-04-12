@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import Alert from "../components/Alert.astro";
+---
+
+<section>
+  <div class="h-lvh fixed left-1/2 w-1/2 pr-6 py-6">
+    <div class="flex flex-row w-full h-full gap-6">
+      <ul class="flex flex-col h-full gap-6 w-1/2">
+        {
+          [
+            ["Home", "/supplier.png", "descriptive Text"],
+            ["Team", "/supplier.png", "descriptive Text"],
+            ["Projects", "/supplier.png", "descriptive Text"],
+          ].map(([projectTitle, img, altText]) => (
+            <button class="btn-project group request">
+              <p class="project-tag">{projectTitle}</p>
+              <Image
+                src={img}
+                alt={altText}
+                width="300"
+                height="150"
+                class="drop-shadow-xl self-center z-0"
+              />
+            </button>
+          ))
+        }
+      </ul>
+      <ul class="flex flex-col h-full gap-6 w-1/2">
+        {
+          [
+            ["Home", "/supplier.png", "descriptive Text"],
+            ["Team", "/supplier.png", "descriptive Text"],
+            ["Projects", "/supplier.png", "descriptive Text"],
+          ].map(([projectTitle, img, altText]) => (
+            <button class="btn-project group request">
+              <p class="project-tag">{projectTitle}</p>
+              <Image
+                src={img}
+                alt={altText}
+                width="300"
+                height="150"
+                class="drop-shadow-xl self-center z-0"
+              />
+            </button>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <!-- <Alert /> -->
+</section>
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const buttons = document.querySelectorAll("button.request");
+
+  // Handle clicks on each button.
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("Button was clicked!");
+    });
+  });
+</script>

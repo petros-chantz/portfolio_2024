@@ -6,6 +6,15 @@ export default {
       screens: {
         "4k": "2000px",
       },
+      colors: {
+        accent: "#0ea2e9",
+        accentHover: "#0287c7",
+        accentLightHover: "#f0faff",
+        primary: "#202831",
+        greyDark: "#D7DCE0",
+        greyLight: "#fafafa",
+        greyHover: "#F5F7F9",
+      },
     },
   },
   plugins: [],

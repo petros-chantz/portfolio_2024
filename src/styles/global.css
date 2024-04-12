@@ -1,6 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   scrollbar-width: none;
-  /* background-color: black; */
+}
+
+@layer components {
+  .link-logo {
+    @apply text-xl tracking-wide font-medium text-primary;
+  }
+
+  .link-primary {
+    @apply hover:text-accent text-primary text-lg border-b-2 hover:border-b-accent border-b-primary self-center py-[2px];
+  }
+
+  .link-navigation {
+    @apply w-2 h-2 bg-greyDark rounded-full hover:bg-accent;
+  }
+
+  h1 {
+    @apply text-primary font-medium text-5xl leading-snug;
+  }
+
+  h3 {
+    @apply text-primary text-3xl font-normal;
+  }
+
+  p {
+    @apply leading-snug font-normal text-2xl;
+  }
+
+  .btn-project {
+    @apply w-full h-full flex flex-col justify-center relative bg-greyLight hover:bg-greyHover rounded;
+  }
+
+  .btn-request {
+    @apply bg-accent hover:bg-accentHover shadow-lg ease-in-out text-white text-base self-center px-4 py-2 rounded mt-12 md:mt-6;
+  }
+
+  .btn-nothanks {
+    @apply hover:bg-accentLightHover ease-in-out text-accent text-base self-center px-4 py-2 rounded mt-12 md:mt-6;
+  }
+
+  .project-tag {
+    @apply px-5 py-[5px] bg-greyLight text-primary absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-primary;
+  }
 }
 
 /* :root {
@@ -41,34 +86,4 @@ body {
   font-size: 20px;
   line-height: 1.7;
 }
-main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
-  line-height: 1.2;
-}
-h1 {
-  font-size: 3.052em;
-}
-h2 {
-  font-size: 2.441em;
-}
-h3 {
-  font-size: 1.953em;
-}
-h4 {
-  font-size: 1.563em;
-}
-h5 {
-  font-size: 1.25em;
-} */
+ */

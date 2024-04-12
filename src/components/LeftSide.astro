@@ -1,0 +1,60 @@
+---
+import Socials from "../components/Socials.astro";
+import Logo from "../components/Logo.astro";
+import NavigationDots from "../components/NavigationDots.astro";
+---
+
+<section class="flex flex-col w-1/2 bg-white pt-12 pb-6 px-12">
+  <Logo />
+  <Socials />
+
+  <div class="h-full mb-24">
+    <div class="h-[90dvh] flex items-center" id="hero">
+      <h1 class="flex flex-col">
+        <span>Designing a world where</span>
+        <span>digital technologies are</span>
+        <span><span class="text-accent">enablers</span> of experiences.</span>
+      </h1>
+    </div>
+    <div class="mt-24 mr-24 flex flex-col gap-48">
+      <div class="gap-6 flex flex-col" id="about">
+        <h3 class="font-semibold">Hey, I'm Petros!</h3>
+        <h3 class="flex flex-col gap-6">
+          I'm an Interaction & UX/UI designer.
+          <span
+            >I design rich, meaningful and expressive digital experiences by
+            connecting design, technology and data.</span
+          > With my background in product design, engineering and human-computer
+          interaction, I craft product experiences for organisations leveraging data
+          as a design material.
+        </h3>
+      </div>
+
+      <div class="flex flex-col gap-24" id="writing">
+        <h1>My design philosophy is:</h1>
+        <div class="flex flex-col gap-6">
+          <h3 class="font-semibold">"Show me, don't tell me."</h3>
+          <p class="indent-8">
+            Experiences are always felt, never described. Designing meaningful
+            digital interactions is an act of doing, not an act of “gut
+            feelings” and guesswork. As a designer, I embrace and welcome the
+            inherently uncertain nature of the design process. I work
+            holistically, unravelling assumptions and ambiguities that sit on
+            the surface.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h3 class="font-semibold">Designing is not a solo project</h3>
+          <p class="indent-8">
+            I don’t design alone in my ivory tower, thinking about an ideal
+            world. The mindset of a design practice that is cut off from any
+            other discipline is dangerous and narrow-minded. I believe design is
+            crossroad of multiple disciplines and great products are a result of
+            even greater teams.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
