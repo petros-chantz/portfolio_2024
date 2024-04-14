@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Alert from "./Alert.astro";
 ---
 
 <section>
@@ -12,7 +13,7 @@ import { Image } from "astro:assets";
             ["Team", "/supplier.png", "descriptive Text"],
             ["Projects", "/supplier.png", "descriptive Text"],
           ].map(([projectTitle, img, altText]) => (
-            <button class="btn-project group" id="openAlert">
+            <button class="btn-project group" alert-btn>
               <p class="project-tag">{projectTitle}</p>
               <Image
                 src={img}
@@ -32,7 +33,7 @@ import { Image } from "astro:assets";
             ["Team", "/supplier.png", "descriptive Text"],
             ["Projects", "/supplier.png", "descriptive Text"],
           ].map(([projectTitle, img, altText]) => (
-            <button class="btn-project group" id="openAlert">
+            <button class="btn-project group" alert-btn>
               <p class="project-tag">{projectTitle}</p>
               <Image
                 src={img}
@@ -47,7 +48,7 @@ import { Image } from "astro:assets";
       </ul>
     </div>
   </div>
-  <!-- <Alert /> -->
+  <Alert />
 </section>
 
 <script>
@@ -58,6 +59,9 @@ import { Image } from "astro:assets";
     isOpen.set(true);
   }
 
-  // Add an event listener to the button
-  document.getElementById("openAlert")!.addEventListener("click", openAlert);
+  const buttons = document.querySelectorAll("[alert-btn]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => openAlert());
+  });
 </script>

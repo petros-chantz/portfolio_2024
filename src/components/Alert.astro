@@ -8,7 +8,7 @@
   style="display: none"
 >
   <div
-    class="m-6 p-6 flex flex-col justify-between self-end w-2/3 rounded drop-shadow-2xl bg-white z-10"
+    class="m-6 p-6 flex flex-col justify-between self-end w-2/3 rounded drop-shadow-2xl bg-white"
   >
     <div class="flex flex-row items-start gap-3">
       <div class="flex justify-start mt-1">
@@ -37,8 +37,12 @@
     </div>
 
     <div class="flex flex-row gap-3 justify-end">
-      <a href="mailto:" class="btn-request">Request portfolio</a>
-      <button type="button" class="btn-nothanks">No, maybe later</button>
+      <button type="button" class="btn-nothanks" btn-resolve-alert
+        >No, maybe later</button
+      >
+      <a href="mailto:" class="btn-request" btn-resolve-alert
+        >Request portfolio</a
+      >
     </div>
   </div>
 </section>
@@ -46,12 +50,25 @@
 <script>
   import { isOpen } from "../store/store.js";
 
-  // Listen to changes in the store, and show/hide the dialog accordingly
   isOpen.subscribe((open) => {
     if (open) {
       document.getElementById("alert")!.style.display = "block";
     } else {
       document.getElementById("alert")!.style.display = "none";
     }
+  });
+</script>
+
+<script>
+  import { isOpen } from "../store/store.js";
+
+  function openAlert() {
+    isOpen.set(false);
+  }
+
+  const buttons = document.querySelectorAll("[btn-resolve-alert]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => openAlert());
   });
 </script>
