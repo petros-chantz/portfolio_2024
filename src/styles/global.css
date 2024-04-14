@@ -38,15 +38,15 @@
   }
 
   .btn-request {
-    @apply bg-accent hover:bg-accentHover shadow-lg ease-in-out text-white text-base self-center px-4 py-2 rounded mt-12 md:mt-6;
+    @apply bg-accent hover:bg-accentHover shadow-lg ease-in-out text-white text-base self-center px-4 font-medium py-2 rounded mt-12 md:mt-6;
   }
 
   .btn-nothanks {
-    @apply hover:bg-accentLightHover ease-in-out text-accent text-base self-center px-4 py-2 rounded mt-12 md:mt-6;
+    @apply hover:bg-accentLightHover ease-in-out text-accent text-base self-center px-4 py-2 font-medium rounded mt-12 md:mt-6;
   }
 
   .project-tag {
-    @apply px-5 py-[5px] bg-greyLight text-accent font-medium absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-primary;
+    @apply px-5 py-[5px] bg-white  text-primary font-medium absolute group-hover:visible invisible rounded-2xl z-20 self-center text-base border-2 border-primary;
   }
 }
 

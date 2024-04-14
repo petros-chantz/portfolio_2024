@@ -13,7 +13,7 @@ export default {
         primary: "#202831",
         greyDark: "#D7DCE0",
         greyLight: "#fafafa",
-        greyHover: "#F5F7F9",
+        greyHover: "#ebeff3",
       },
     },
   },
