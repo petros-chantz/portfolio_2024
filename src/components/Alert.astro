@@ -2,7 +2,11 @@
 
 ---
 
-<section class="h-lvh fixed left-1/2 w-1/2 pr-6 py-6 self-end">
+<section
+  class="h-lvh fixed left-1/2 w-1/2 pr-6 py-6 self-end"
+  id="alert"
+  style="display: none"
+>
   <div
     class="m-6 p-6 flex flex-col justify-between self-end w-2/3 rounded drop-shadow-2xl bg-white z-10"
   >
@@ -38,3 +42,16 @@
     </div>
   </div>
 </section>
+
+<script>
+  import { isOpen } from "../store/store.js";
+
+  // Listen to changes in the store, and show/hide the dialog accordingly
+  isOpen.subscribe((open) => {
+    if (open) {
+      document.getElementById("alert")!.style.display = "block";
+    } else {
+      document.getElementById("alert")!.style.display = "none";
+    }
+  });
+</script>

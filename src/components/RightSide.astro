@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
             ["Team", "/supplier.png", "descriptive Text"],
             ["Projects", "/supplier.png", "descriptive Text"],
           ].map(([projectTitle, img, altText]) => (
-            <button class="btn-project group request">
+            <button class="btn-project group" id="openAlert">
               <p class="project-tag">{projectTitle}</p>
               <Image
                 src={img}
@@ -32,7 +32,7 @@ import { Image } from "astro:assets";
             ["Team", "/supplier.png", "descriptive Text"],
             ["Projects", "/supplier.png", "descriptive Text"],
           ].map(([projectTitle, img, altText]) => (
-            <button class="btn-project group request">
+            <button class="btn-project group" id="openAlert">
               <p class="project-tag">{projectTitle}</p>
               <Image
                 src={img}
@@ -49,3 +49,15 @@ import { Image } from "astro:assets";
   </div>
   <!-- <Alert /> -->
 </section>
+
+<script>
+  import { isOpen } from "../store/store.js";
+
+  // Set the store to true when the button is clicked
+  function openAlert() {
+    isOpen.set(true);
+  }
+
+  // Add an event listener to the button
+  document.getElementById("openAlert")!.addEventListener("click", openAlert);
+</script>
