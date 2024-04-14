@@ -3,7 +3,8 @@
 ---
 
 <div
-  class="flex bg-white border-greyDark border-[1px] drop-shadow-2xl m-6 p-6 rounded flex-col"
+  class="fixed flex flex-col justify-between self-center mx-6 bg-white border-greyDark border-[1px] drop-shadow-2xl p-6 rounded visible"
+  id="mobileAlert"
 >
   <div class="flex flex-row items-start gap-3">
     <div class="flex justify-start mt-1">
@@ -24,10 +25,11 @@
     </div>
 
     <div class="flex justify-start">
-      <p class="text-xl text-primary font-normal">
+      <p class="text-lg font-medium">
         Hey! Thanks for visiting my design portfolio. This portfolio is
-        specifically created to be viewed in a desktop setting. Certain elements
-        are hidden in small screens.
+        specifically created to be viewed in <span
+          class="font-semibold underline">large screens</span
+        >. Certain elements are hidden in small screens.
       </p>
     </div>
   </div>
@@ -38,3 +40,29 @@
     >
   </div>
 </div>
+
+<script>
+  import { isMobileOpen } from "../store/store.js";
+
+  isMobileOpen.subscribe((open) => {
+    if (open) {
+      document.getElementById("mobileAlert")!.style.visibility = "visible";
+    } else {
+      document.getElementById("mobileAlert")!.style.visibility = "hidden";
+    }
+  });
+</script>
+
+<script>
+  import { isMobileOpen } from "../store/store.js";
+
+  function closeAlert() {
+    isMobileOpen.set(false);
+  }
+
+  const buttons = document.querySelectorAll("[btn-resolve-alert]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => closeAlert());
+  });
+</script>
